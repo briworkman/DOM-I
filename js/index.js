@@ -42,6 +42,7 @@ const siteContent = {
   }
 };
 
+document.body.style.backgroundColor = "black";
 // Update the nav items
 const nav = document.querySelectorAll("a");
 nav[0].innerText = siteContent["nav"]["nav-item-1"];
@@ -50,6 +51,10 @@ nav[2].innerText = siteContent["nav"]["nav-item-3"];
 nav[3].innerText = siteContent["nav"]["nav-item-4"];
 nav[4].innerText = siteContent["nav"]["nav-item-5"];
 nav[5].innerText = siteContent["nav"]["nav-item-6"];
+
+nav.forEach(element => {
+  element.style.color = "white";
+});
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
@@ -57,6 +62,8 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 //Update middle text
 const topText = document.querySelector(".cta-text h1");
 topText.innerText = siteContent["cta"]["h1"];
+
+topText.style.color = "white";
 
 //Update button
 const topButton = document.querySelector(".cta-text button");
@@ -75,6 +82,14 @@ featuresText[0].innerText = siteContent["main-content"]["features-content"];
 
 mainFeatures[1].innerText = siteContent["main-content"]["about-h4"];
 featuresText[1].innerText = siteContent["main-content"]["about-content"];
+
+mainFeatures.forEach(element => {
+  element.style.color = "white";
+});
+
+featuresText.forEach(element => {
+  element.style.color = "white";
+});
 
 //Update Middle Image
 let middleImg = document.getElementById("middle-img");
@@ -95,15 +110,31 @@ bottomText[1].innerText = siteContent["main-content"]["product-content"];
 bottomContent[2].innerText = siteContent["main-content"]["vision-h4"];
 bottomText[2].innerText = siteContent["main-content"]["vision-content"];
 
+bottomContent.forEach(element => {
+  element.style.color = "white";
+});
+
+bottomText.forEach(element => {
+  element.style.color = "white";
+});
+
 //Update Contact
 const contactHeader = document.querySelector(".contact h4");
 contactHeader.innerText = siteContent["contact"]["contact-h4"];
+
+contactHeader.style.color = "white";
 
 const contactInfo = document.querySelectorAll(".contact p");
 contactInfo[0].innerText = siteContent["contact"]["address"];
 contactInfo[1].innerText = siteContent["contact"]["phone"];
 contactInfo[2].innerText = siteContent["contact"]["email"];
 
+contactInfo.forEach(element => {
+  element.style.color = "white";
+});
+
 //Update Footer
 const footer = document.querySelector("footer p");
 footer.innerText = siteContent["footer"]["copyright"];
+
+footer.style.color = "white";
